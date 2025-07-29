@@ -1,26 +1,179 @@
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-}
-header, footer {
-    background: #222;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-nav a {
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
-}
-nav a:hover {
-    text-decoration: underline;
-}
-main {
-    padding: 20px;
-    background: white;
-    min-height: 80vh;
-}
+        header {
+          background-color: #000000;
+          text-align: center;
+          padding: 10px;
+          font-size: 14px;
+          margin-top: auto;
+        }
+        
+        .brand, .title_epep {
+          color: #edd500;
+          font-size: 15px;
+          font-weight: bold;
+        }
+
+        /* Language Box */
+        /* .center-box {
+            padding: 5px 50px;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 8px;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        } */
+
+        /* Heading Style */
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Container style update */
+        .container {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: auto;
+        }
+
+        .image-link{
+            background-color:  white;
+        }
+
+        .container .image-link {
+            margin: 10px;
+            text-align: center;
+            width: 200px; /* Set a fixed width for each image container */
+            height: 100px; /* Set a fixed height for each image container */
+            overflow: hidden; /* Hide any overflow from images */
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+
+        /* Fit all images inside the fixed-size box */
+        .container .image-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ensures images are fully contained within the box */
+            transition: transform 0.3s ease;
+        }
+
+        .container .image-link img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Advertisement Space */
+        /* .ad-space {
+            width: 65%;
+            height: 200px;
+            background-color: #eaeaea;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+            color: #333;
+            margin: auto;
+            margin-bottom: 20px;
+        } */
+
+        footer {
+          background-color: #000000;
+          text-align: center;
+          padding: 20px;
+          border-top: 1px solid #333;
+          font-size: 14px;
+          margin-top: auto;
+        }
+        
+        .footer-links {
+          margin-bottom: 8px;
+        }
+        
+        .footer-links a {
+          color: #ccc;
+          text-decoration: none;
+          margin: 0 8px;
+        }
+        
+        .footer-links a:hover {
+          text-decoration: underline;
+        }
+        
+        .footer-copy {
+          color: #777;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                width: 90%; /* Adjust container width on medium devices */
+            }
+            .pry{
+                width: 90%; /* Adjust container width on medium devices */
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 16px; /* Smaller font size for small screens */
+                margin: 0 10px;
+            }
+            .pry{
+                font-size: 16px; /* Smaller font size for small screens */
+                margin: 0 10px;
+            }
+
+            .container {
+                width: 90%; /* Adjust container width on small devices */
+            }
+
+            .container .image-link {
+                width: 150px; /* Slightly smaller images on small screens */
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 8px 0;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px 0; /* Stack links on very small screens */
+                font-size: 14px;
+            }
+
+            .container {
+                width: 100%; /* Full width container on very small screens */
+            }
+
+            .container .image-link {
+                width: 120px; /* Even smaller images for very small screens */
+                height: 100px;
+            }
+
+            .ad-space {
+                height: 80px; /* Slightly smaller ad space */
+                font-size: 16px;
+            }
+            .pry{
+                display: block;
+                margin: 5px 0; /* Stack links on very small screens */
+                font-size: 14px;
+            }
+        }
